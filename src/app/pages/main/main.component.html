@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+<main style="background: linear-gradient(rgb(67, 67, 252), rgb(180, 255, 251));">
+    <h1 style="text-align: center; color: white;">Peliculas disponibles</h1>
+    <div class="movie-gallery" >
+        <div class="movie" *ngFor="let item of data; index as i">
+            <img src={{item.coverUrl}} alt={{item.name}}>
+            <h3>{{item.name}}</h3>
+            <p><a href={{item.videoUrl}}>Enlace</a></p>
+        </div>
+
+    </div>
+    
+</main>
+
+<app-footer></app-footer>
+

@@ -1,0 +1,17 @@
+<header  style="background-color: rgb(41, 46, 116); height: 70px;">
+    <div class="logo">
+        <h1>Videos JH</h1>
+    </div>
+    <nav class="navegacion">
+        <ul>
+            <li><a href="#" routerLink="/main">Inicio</a></li>
+            <li><a href="#" routerLink="/adm-vid">Administrar Peliculas</a></li>
+        </ul>
+    </nav>
+    <div class="sesion">
+        <ng-container *ngIf="isLoggedIn">
+            <span style="margin-right: 35px;">{{ userEmail }}</span>
+            <a href="#" (click)="logout()" routerLink="/login">Cerrar Sesión</a>
+        </ng-container>
+    </div>
+</header>

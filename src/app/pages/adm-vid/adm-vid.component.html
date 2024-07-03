@@ -1,0 +1,44 @@
+<app-header></app-header>
+
+<div class="body">
+
+  <div class="form-container">
+    <h2>Editar Película</h2>
+    <form>
+      <label for="name">Nombre de la película</label>
+      <input type="text" id="name" [(ngModel)]="editingMovie.name" name="name" required />
+      
+      <label for="coverUrl">URL de la imagen de portada</label>
+      <input type="text" id="coverUrl" [(ngModel)]="editingMovie.coverUrl" name="coverUrl" required />
+      
+      <label for="videoUrl">URL del video</label>
+      <input type="text" id="videoUrl" [(ngModel)]="editingMovie.videoUrl" name="videoUrl" required />
+      
+      <button type="submit" (click)="updateMovie()">Actualizar Película</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <h1>Registro de Películas</h1>
+    <button routerLink="/subir-vid">Registrar Nuevas Películas</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre de la Película</th>
+          <th style="width: 35%;">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of movies; index as i">
+          <td style="text-align: left;">{{ item.name }}</td>
+          <td>
+            <button (click)="editMovie(item)">Editar</button>
+            <button (click)="deleteMovie(item.id!)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<app-footer></app-footer>

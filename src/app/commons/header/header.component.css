@@ -1,0 +1,48 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size:36px;
+}
+
+.navegacion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navegacion ul li {
+    margin: 0 15px;
+}
+
+.navegacion ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+.navegacion ul li a:hover {
+    color: #ddd;
+}
+
+.sesion a {
+    padding-right: 50px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+.sesion a:hover {
+    color: #ddd;
+}

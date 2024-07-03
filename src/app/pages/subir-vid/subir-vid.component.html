@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="body">
+    <div class="form-container">
+        <h2>Agregar Película</h2>
+        <form>
+            <div class="input-group">
+                <label for="cover-url">URL de la Imagen de Portada</label>
+                <input type="url" id="cover-url" name="cover-url" [(ngModel)]="movie.coverUrl" required>
+            </div>
+            <div class="input-group">
+                <label for="movie-name">Nombre de la Película</label>
+                <input type="text" id="movie-name" name="movie-name" [(ngModel)]="movie.name" required>
+            </div>
+            <div class="input-group">
+                <label for="video-url">URL del Video</label>
+                <input type="url" id="video-url" name="video-url" [(ngModel)]="movie.videoUrl" required>
+            </div>
+            <button type="submit" (click)="saveMovie()" routerLink="/main">Agregar</button>
+        </form>
+    </div>
+</div>
+
+<app-footer></app-footer>

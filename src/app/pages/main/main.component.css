@@ -1,0 +1,31 @@
+main {
+    padding: 80px 20px 20px;
+}
+
+.movie-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.movie {
+    background: #a8c4f0;    
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.movie img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: 270px;
+}
+
+.movie h3 {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: #333;
+}
